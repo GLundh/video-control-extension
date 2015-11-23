@@ -1,0 +1,24 @@
+{
+  "manifest_version": 2,
+
+  "name": "Video Control Extension",
+  "description": "This extension adds a context menu option which allows showing the video controls on a html5 video element",
+  "version": "0.9.1",
+  "icons": { "128": "icon128.png" },
+  "permissions": [
+    "contextMenus", "tabs"
+  ],
+  "content_scripts": [
+    {
+        "matches": [
+            "<all_urls>"
+        ],
+        "js": [
+            "add-video-controls.js"
+        ]
+    }
+  ],
+  "background": {
+    "scripts": ["add-context-menu.js"]
+  }
+}
