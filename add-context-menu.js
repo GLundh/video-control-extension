@@ -10,7 +10,7 @@ function genericOnClick(info, tab) {
      });
 }
 
-var id = chrome.contextMenus.create({
+chrome.contextMenus.create({
   "title": "Show video controls",
   "contexts":["video"],
   "onclick": genericOnClick
